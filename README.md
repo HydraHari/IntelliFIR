@@ -38,6 +38,7 @@ IntelliFIR is an AI-assisted complaint-to-FIR drafting and investigation-support
 | ✅ Independent Validation | Automated draft-vs-complaint verification |
 | 🔎 Similar Case Retrieval | Sentence Transformers + FAISS semantic search |
 | ⚖️ Legal Information | Semantic search over verified legal documents |
+| 🕵️ AI Investigation Agent | Autonomous multi-step tool-using agent (Analysis, Provenance, Validation, Legal, Similar Cases, Reports) |
 | 🤖 RAG Assistant | Retrieval-augmented investigation support with citations |
 | 👨‍💼 Review Workflow | Human reviewer decision capture with audit trail |
 | 📊 Research Evaluation | Reproducible metric comparison across three systems |
@@ -66,6 +67,36 @@ IntelliFIR is an AI-assisted complaint-to-FIR drafting and investigation-support
  (Users, Cases,     (Embeddings,        (Uploaded
   Drafts, etc.)      Similar Cases)      Documents)
 ```
+
+---
+
+## AI Investigation Agent
+
+IntelliFIR includes an autonomous, tool-using **AI Investigation Agent** that upgrades standard RAG assistance into an active investigative co-pilot.
+
+### Core Agent Capabilities
+- **Natural-Language Understanding:** Decomposes complex investigator queries into structured execution plans.
+- **Dynamic Tool Calling:** Invokes only the necessary tools required to answer the query.
+- **Multi-Step Workflows:** Sequentially chains complaint analysis, character-level provenance checks, factual contradiction validation, legal research, similar-case retrieval, and structured reporting.
+- **Strict Evidence Grounding:** Verifies every fact against the original complaint via Unicode character offsets `raw_text[start:end] == span_text`.
+- **Statutory Grounding:** Maps offences directly to the **Bharatiya Nyaya Sanhita, 2023 (BNS)**, BNSS 2023, and BSA 2023, cross-referencing historical IPC sections without hallucinating non-existent provisions.
+- **Consequential Action Safeguard:** Automatically blocks attempts to autonomously register FIRs, order arrests, or declare guilt, enforcing mandatory human officer authorization under the law.
+
+### The 6 Agent Tools
+| Tool Name | Key Function | Output Artifact |
+|-----------|--------------|-----------------|
+| `analyze_complaint` | Extracts parties, dates, locations, property, weapons, and distinguishes allegations from established facts | `ComplaintAnalysisOutput` |
+| `verify_evidence_provenance` | Audits character-level offsets against raw text; preserves Unicode invariants and flags unsupported facts | `EvidenceProvenanceOutput` |
+| `validate_complaint_facts` | Identifies contradictions, timeline inconsistencies, missing statutory elements, and ambiguous claims | `FactualValidationOutput` |
+| `research_legal_provisions` | Searches verified BNS 2023 / IPC statutes, cognizable/bailable classifications, and penal ingredients | `LegalResearchOutput` |
+| `retrieve_similar_cases` | FAISS semantic search for similar case dockets and precedent modus operandi with legal disclaimers | `SimilarCaseOutput` |
+| `generate_investigation_report` | Synthesizes an end-to-end investigation report formatted in Markdown with human review controls | `InvestigationReportOutput` |
+
+### Agent API Endpoints
+- `POST /api/v1/assistant/agent/run`: Run autonomous investigation workflows with conversational history and case context.
+- `GET /api/v1/assistant/tools`: Inspect available tool metadata, parameters, and descriptions.
+- `GET /api/v1/assistant/cases`: Search and list indexed case dockets for the agent interface.
+- `POST /api/v1/assistant/query`: Legacy single-turn RAG query endpoint (fully backward-compatible).
 
 ---
 
@@ -325,6 +356,30 @@ Metrics reported:
 - Contradiction detection P/R/F1
 
 > **Note**: Results are computed from actual outputs. No accuracy values are hardcoded.
+
+---
+
+## Testing and Verification
+
+### Backend Automated Test Suite
+Run all unit, integration, and AI Investigation Agent tests:
+
+```bash
+# From repository root
+PYTHONPATH=backend python3 -m pytest backend/tests
+
+# Run specifically the AI Investigation Agent tests
+PYTHONPATH=backend python3 -m pytest backend/tests/test_investigation_agent.py -v
+PYTHONPATH=backend python3 -m pytest backend/tests/test_investigation_agent_api.py -v
+```
+
+### Frontend Production Build
+Verify TypeScript compilation and client asset bundle build:
+
+```bash
+cd frontend
+npm run build
+```
 
 ---
 
