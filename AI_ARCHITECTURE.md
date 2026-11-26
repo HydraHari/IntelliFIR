@@ -154,3 +154,65 @@ $$\mathcal{V}(c_j, C) = \begin{cases}
   - Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) procedure references (e.g., Sec 173 BNSS for FIR registration).
   - Bharatiya Sakshya Adhiniyam, 2023 (BSA) for electronic and documentary evidence rules.
 - FAISS cosine similarity retrieval over penal code descriptions and past FIR precedent dockets.
+
+---
+
+## 3. Autonomous AI Investigation Agent Architecture
+
+### 3.1 Overview and Purpose
+The IntelliFIR AI Investigation Agent upgrades the legacy single-turn RAG assistant into an autonomous, tool-using multi-step agent. Designed specifically for law enforcement investigators, the agent dynamically decomposes natural-language investigation directives, selects targeted tools, executes sequential workflows, checks data provenance, identifies contradictions, grounds statutory findings, and produces structured investigation reports.
+
+### 3.2 Agent Core Architecture
+
+```
+                  ┌───────────────────────────────────────────────┐
+                  │      Investigator Natural Language Query      │
+                  │   ("Analyse CMP-001, find contradictions...")  │
+                  └───────────────────────┬───────────────────────┘
+                                          │
+                                          ▼
+                  ┌───────────────────────────────────────────────┐
+                  │     Investigation Agent Orchestrator          │
+                  │  - Intent Recognition & Goal Planning         │
+                  │  - Consequential Action Safety Guardrail       │
+                  │  - Dynamic Tool Selector                      │
+                  │  - Execution State & Telemetry Log            │
+                  └───────┬───────────────┬───────────────┬───────┘
+                          │               │               │
+     ┌────────────────────┴───┐   ┌───────┴────────┐   ┌──┴─────────────────────┐
+     ▼                        ▼   ▼                ▼   ▼                        ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│    TOOL A    │ │    TOOL B    │ │    TOOL C    │ │    TOOL D    │ │    TOOL E    │ │    TOOL F    │
+│  Complaint   │ │   Evidence   │ │   Factual    │ │    Legal     │ │ Similar Case │ │Investigation │
+│   Analysis   │ │  Provenance  │ │  Validation  │ │   Research   │ │  Retrieval   │ │    Report    │
+│  (Entities & │ │ (Offset In-  │ │(Contradiction│ │  (BNS/BNSS/  │ │ (FAISS Vector│ │  (Structured │
+│ Allegations) │ │   variants)  │ │   & Gaps)    │ │  BSA Corpus) │ │  Precedents) │ │   Synthesis) │
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+       │                │                │                │                │                │
+       └────────────────┴────────────────┼────────────────┴────────────────┴────────────────┘
+                                         ▼
+                  ┌───────────────────────────────────────────────┐
+                  │     Evidence-Grounded Response Synthesis      │
+                  │  - Strict Provenance Invariant Check          │
+                  │  - Applicable BNS 2023 Provisions             │
+                  │  - Precedent Case Modus Operandi              │
+                  │  - Contextual Investigator Inquiries          │
+                  │  - Mandatory Human-in-the-Loop Review Notice  │
+                  └───────────────────────────────────────────────┘
+```
+
+### 3.3 The 6 Agent Tools
+1. **TOOL A – Complaint Analysis (`analyze_complaint`):** Retrieves complaint by UUID or human-readable reference (e.g. `CMP-001`). Extracts complainant, accused parties, victims, witnesses, incident date/time, location, property, and weapons. Distinguishes established facts from unverified allegations.
+2. **TOOL B – Evidence Provenance (`verify_evidence_provenance`):** Audits character offsets $[ \sigma_{\text{start}}, \sigma_{\text{end}} ]$ against the raw text. Enforces the strict invariant:
+   $$\text{raw\_text}[\sigma_{\text{start}} : \sigma_{\text{end}}] \equiv \text{span\_text}$$
+   Flags unsupported facts and offset drifts.
+3. **TOOL C – Factual Validation (`validate_complaint_facts`):** Decoupled validation engine checking for missing statutory elements (date, time, jurisdiction), timeline inconsistencies, numeric contradictions, and unsupported claims. Emits severity-tiered findings (`high`, `medium`, `low`) with actionable police recommendations.
+4. **TOOL D – Legal Research (`research_legal_provisions`):** Grounded search over the Bharatiya Nyaya Sanhita (BNS 2023), BNSS 2023, and BSA 2023 statutory corpus with historical IPC correspondences. Never invents non-existent sections.
+5. **TOOL E – Similar Case Retrieval (`retrieve_similar_cases`):** Semantic vector search across previous case records using `all-MiniLM-L6-v2` embeddings and FAISS. Returns cosine similarity scores and attaches mandatory statutory disclaimers noting that similarity does not establish guilt.
+6. **TOOL F – Investigation Report Generator (`generate_investigation_report`):** Aggregates findings from Tools A–E into a structured markdown Investigation Support Report with human review controls.
+
+### 3.4 Consequential Action Guardrail and Safety Governance
+To prevent unlawful autonomous law enforcement actions:
+- **Statutory Guardrail:** Substantive criminal justice actions (FIR registration, arrest warrants, case dismissal, guilt/innocence declarations) are blocked by automated regex and policy checks.
+- **Human-in-the-Loop:** The agent operates exclusively in a decision-support advisory capacity. Formal registration requires explicit manual confirmation by the Investigating Officer under Section 173 BNSS.
+
