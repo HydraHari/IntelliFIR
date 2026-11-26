@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IntelliFIR Evaluation Dataset Schema",
+  "description": "Standard ground-truth annotation format for evaluating FIR generation, extraction, and factual validation pipelines.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "text", "gold_entities", "gold_missing_facts", "gold_contradictions"],
+    "properties": {
+      "id": { "type": "string" },
+      "text": { "type": "string" },
+      "gold_entities": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["text", "type"],
+          "properties": {
+            "text": { "type": "string" },
+            "type": { "type": "string", "enum": ["PERSON", "LOCATION", "ORGANIZATION", "DATE", "TIME", "OTHER"] }
+          }
+        }
+      },
+      "gold_missing_facts": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "gold_contradictions": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    }
+  }
+}

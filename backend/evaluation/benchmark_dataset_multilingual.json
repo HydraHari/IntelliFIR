@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "BENCH-001",
+    "category": "Theft / Burglary",
+    "language": "en",
+    "text": "I, Ramesh Gupta, residing at Flat 402, Sunrise Apartments, Sector 15, Rohini, Delhi, state that on 12/08/2026 at around 8:30 PM, my HP Pavilion laptop worth Rs. 65,000 was stolen from my residence while I had stepped out for groceries. The balcony door latch was tampered with. I request legal action.",
+    "gold_entities": [
+      {
+        "text": "Ramesh Gupta",
+        "type": "PERSON"
+      },
+      {
+        "text": "Sunrise Apartments, Sector 15, Rohini, Delhi",
+        "type": "LOCATION"
+      },
+      {
+        "text": "12/08/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "8:30 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "HP Pavilion laptop",
+        "type": "OTHER"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Ramesh Gupta"
+      },
+      {
+        "type": "incident_date",
+        "value": "12/08/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "8:30 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Sunrise Apartments, Sector 15, Rohini, Delhi"
+      },
+      {
+        "type": "property",
+        "value": "HP Pavilion laptop"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 65,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 303(2) BNS",
+      "Section 329(3) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-002",
+    "category": "Physical Assault / Hurt",
+    "language": "en",
+    "text": "My name is Rajesh Sharma. On 14/09/2026 at 10:15 PM outside Grand Mall, MG Road, two unknown men intercepted my car, pulled me out, and struck me on the left arm with an iron rod causing severe bleeding and fracture. I was admitted to City Hospital. Bystander Suresh Kumar witnessed the entire assault.",
+    "gold_entities": [
+      {
+        "text": "Rajesh Sharma",
+        "type": "PERSON"
+      },
+      {
+        "text": "14/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "10:15 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Grand Mall, MG Road",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Suresh Kumar",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Rajesh Sharma"
+      },
+      {
+        "type": "incident_date",
+        "value": "14/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "10:15 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Grand Mall, MG Road"
+      },
+      {
+        "type": "unknown_accused",
+        "value": "two unknown men"
+      },
+      {
+        "type": "weapon_used",
+        "value": "iron rod"
+      },
+      {
+        "type": "witness",
+        "value": "Suresh Kumar"
+      },
+      {
+        "type": "injury",
+        "value": "severe bleeding and fracture"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 115(2) BNS",
+      "Section 118(1) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-003",
+    "category": "Snatching",
+    "language": "en",
+    "text": "I, Priya Sen, report that on 20/09/2026 at 7:00 PM while walking near Gandhi Park, two masked riders on a black Pulsar motorcycle snatched my gold chain worth Rs. 90,000 from behind. They sped towards Main Bazaar. CCTV camera at the park entrance captured the bike.",
+    "gold_entities": [
+      {
+        "text": "Priya Sen",
+        "type": "PERSON"
+      },
+      {
+        "text": "20/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "7:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Gandhi Park",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Priya Sen"
+      },
+      {
+        "type": "incident_date",
+        "value": "20/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "7:00 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Gandhi Park"
+      },
+      {
+        "type": "unknown_accused",
+        "value": "two masked riders"
+      },
+      {
+        "type": "property",
+        "value": "gold chain"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 90,000"
+      },
+      {
+        "type": "evidence",
+        "value": "CCTV camera"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 304 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-004",
+    "category": "Missing Statutory Information",
+    "language": "en",
+    "text": "My brown leather wallet containing credit cards and Rs. 8,500 in cash was stolen sometime back. I suspect that Ajay from the neighborhood might be behind this. Please investigate.",
+    "gold_entities": [
+      {
+        "text": "Ajay",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "property",
+        "value": "wallet"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 8,500"
+      },
+      {
+        "type": "accused",
+        "value": "Ajay"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Date",
+      "Incident Time",
+      "Incident Location"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [
+      "sometime back",
+      "suspect that"
+    ],
+    "gold_bns_sections": [
+      "Section 303(2) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-005",
+    "category": "Contradictory Statement",
+    "language": "en",
+    "text": "I, Deepak Verma, was attacked on 01/10/2026, or maybe it was 05/10/2026, outside Rajiv Chowk Metro Station. The attackers were completely unarmed and had no weapon, but they threatened me with a knife and demanded cash.",
+    "gold_entities": [
+      {
+        "text": "Deepak Verma",
+        "type": "PERSON"
+      },
+      {
+        "text": "01/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "05/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "Rajiv Chowk Metro Station",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Deepak Verma"
+      },
+      {
+        "type": "incident_location",
+        "value": "Rajiv Chowk Metro Station"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Time"
+    ],
+    "gold_contradictions": [
+      "Multiple conflicting dates",
+      "Contradictory weapon claims"
+    ],
+    "gold_ambiguities": [
+      "maybe"
+    ],
+    "gold_bns_sections": [
+      "Section 115(2) BNS",
+      "Section 308 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-006",
+    "category": "Cyber Fraud / Cheating",
+    "language": "en",
+    "text": "I, Ananya Roy, state that on 18/09/2026 at 3:15 PM, I received a phone call from an unknown person claiming to be a bank manager from SBI. He induced me to download an APK file, resulting in an unauthorized fraudulent transfer of Rs. 1,45,000 from my account via UPI transaction ID 92837482910.",
+    "gold_entities": [
+      {
+        "text": "Ananya Roy",
+        "type": "PERSON"
+      },
+      {
+        "text": "18/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "3:15 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "SBI",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Ananya Roy"
+      },
+      {
+        "type": "incident_date",
+        "value": "18/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "3:15 PM"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 1,45,000"
+      },
+      {
+        "type": "evidence",
+        "value": "UPI transaction ID 92837482910"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Location"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 318(4) BNS",
+      "Section 66D IT Act"
+    ]
+  },
+  {
+    "id": "BENCH-007",
+    "category": "Extortion / Threat",
+    "language": "en",
+    "text": "I am Vikramaditya Rathore, running a shop at Sector 22 Market, Chandigarh. On 22/09/2026 at 5:00 PM, accused Mohit Yadav visited my shop and demanded protection money of Rs. 50,000, threatening to burn down my store if I failed to pay by tomorrow.",
+    "gold_entities": [
+      {
+        "text": "Vikramaditya Rathore",
+        "type": "PERSON"
+      },
+      {
+        "text": "Sector 22 Market, Chandigarh",
+        "type": "LOCATION"
+      },
+      {
+        "text": "22/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "5:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Mohit Yadav",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Vikramaditya Rathore"
+      },
+      {
+        "type": "incident_date",
+        "value": "22/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "5:00 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Sector 22 Market, Chandigarh"
+      },
+      {
+        "type": "accused",
+        "value": "Mohit Yadav"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 50,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 308(2) BNS",
+      "Section 351 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-008",
+    "category": "House-trespass",
+    "language": "en",
+    "text": "I, Sunita Devi, report that on 25/09/2026 at 2:30 AM, unknown intruders forced open the back door of my house located at Plot 45, Shastri Nagar, Meerut. They ransacked the bedroom and fled with silver utensils worth Rs. 35,000.",
+    "gold_entities": [
+      {
+        "text": "Sunita Devi",
+        "type": "PERSON"
+      },
+      {
+        "text": "25/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "2:30 AM",
+        "type": "TIME"
+      },
+      {
+        "text": "Plot 45, Shastri Nagar, Meerut",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Sunita Devi"
+      },
+      {
+        "type": "incident_date",
+        "value": "25/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "2:30 AM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Plot 45, Shastri Nagar, Meerut"
+      },
+      {
+        "type": "unknown_accused",
+        "value": "unknown intruders"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 35,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 329(3) BNS",
+      "Section 303(2) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-009",
+    "category": "Vehicle Theft",
+    "language": "en",
+    "text": "I, Manish Tiwari, parked my Hero Splendor motorcycle registration number DL-8S-AB-1234 outside Dwarka Sector 10 Metro Station on 28/09/2026 at 9:00 AM. When I returned at 6:00 PM, the motorcycle was stolen. CCTV at the parking gate showed an unidentified man riding it away at 1:45 PM.",
+    "gold_entities": [
+      {
+        "text": "Manish Tiwari",
+        "type": "PERSON"
+      },
+      {
+        "text": "Dwarka Sector 10 Metro Station",
+        "type": "LOCATION"
+      },
+      {
+        "text": "28/09/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "9:00 AM",
+        "type": "TIME"
+      },
+      {
+        "text": "6:00 PM",
+        "type": "TIME"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Manish Tiwari"
+      },
+      {
+        "type": "incident_date",
+        "value": "28/09/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "9:00 AM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Dwarka Sector 10 Metro Station"
+      },
+      {
+        "type": "property",
+        "value": "Hero Splendor motorcycle"
+      },
+      {
+        "type": "evidence",
+        "value": "CCTV at the parking gate"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 303(2) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-010",
+    "category": "Vague / Ambiguous Statement",
+    "language": "en",
+    "text": "Some unknown persons came near my shop in Civil Lines approx three days ago and created a disturbance. They broke some display glass and ran away. Maybe someone hired them.",
+    "gold_entities": [
+      {
+        "text": "Civil Lines",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "incident_location",
+        "value": "Civil Lines"
+      },
+      {
+        "type": "unknown_accused",
+        "value": "Some unknown persons"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Date",
+      "Incident Time",
+      "Complainant Identity"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [
+      "approx",
+      "maybe"
+    ],
+    "gold_bns_sections": [
+      "Section 324 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-011",
+    "category": "Assault & Weapon",
+    "language": "en",
+    "text": "I am Arvind Patel. On 02/10/2026 at 8:00 PM in Maninagar, Ahmedabad, accused Rakesh Parmar brandished a sharp dagger and stabbed my shoulder after a heated argument over parking. Eyewitness Dr. Hitesh Shah administered first aid and took me to LG Hospital.",
+    "gold_entities": [
+      {
+        "text": "Arvind Patel",
+        "type": "PERSON"
+      },
+      {
+        "text": "02/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "8:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Maninagar, Ahmedabad",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Rakesh Parmar",
+        "type": "PERSON"
+      },
+      {
+        "text": "Dr. Hitesh Shah",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Arvind Patel"
+      },
+      {
+        "type": "incident_date",
+        "value": "02/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "8:00 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Maninagar, Ahmedabad"
+      },
+      {
+        "type": "accused",
+        "value": "Rakesh Parmar"
+      },
+      {
+        "type": "weapon_used",
+        "value": "dagger"
+      },
+      {
+        "type": "witness",
+        "value": "Dr. Hitesh Shah"
+      },
+      {
+        "type": "injury",
+        "value": "stabbed my shoulder"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 118(1) BNS",
+      "Section 109 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-012",
+    "category": "Cheating / Investment Scam",
+    "language": "en",
+    "text": "I, Kavita Nair, state that on 05/10/2026 at 11:00 AM, accused Pradeep Menon collected Rs. 3,00,000 in cash at his office in Indiranagar, Bangalore, promising guaranteed government bonds. He has closed the office and switched off his phone.",
+    "gold_entities": [
+      {
+        "text": "Kavita Nair",
+        "type": "PERSON"
+      },
+      {
+        "text": "05/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "11:00 AM",
+        "type": "TIME"
+      },
+      {
+        "text": "Pradeep Menon",
+        "type": "PERSON"
+      },
+      {
+        "text": "Indiranagar, Bangalore",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Kavita Nair"
+      },
+      {
+        "type": "incident_date",
+        "value": "05/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "11:00 AM"
+      },
+      {
+        "type": "accused",
+        "value": "Pradeep Menon"
+      },
+      {
+        "type": "incident_location",
+        "value": "Indiranagar, Bangalore"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 3,00,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 318(4) BNS",
+      "Section 316 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-013",
+    "category": "Robbery with Injury",
+    "language": "en",
+    "text": "I, Amit Singhal, was intercepted by three youths on Outer Ring Road, Hyderabad on 08/10/2026 at 11:45 PM. They brandished a knife, slashed my palm causing deep bleeding, and took my wallet containing Rs. 14,000 and an Apple iPhone 14.",
+    "gold_entities": [
+      {
+        "text": "Amit Singhal",
+        "type": "PERSON"
+      },
+      {
+        "text": "Outer Ring Road, Hyderabad",
+        "type": "LOCATION"
+      },
+      {
+        "text": "08/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "11:45 PM",
+        "type": "TIME"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Amit Singhal"
+      },
+      {
+        "type": "incident_location",
+        "value": "Outer Ring Road, Hyderabad"
+      },
+      {
+        "type": "incident_date",
+        "value": "08/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "11:45 PM"
+      },
+      {
+        "type": "unknown_accused",
+        "value": "three youths"
+      },
+      {
+        "type": "weapon_used",
+        "value": "knife"
+      },
+      {
+        "type": "injury",
+        "value": "deep bleeding"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 14,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 309 BNS",
+      "Section 118(1) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-014",
+    "category": "Missing Time and Date",
+    "language": "en",
+    "text": "My factory premises in Okhla Phase 3 were burglarized. Copper wire reels worth Rs. 2,10,000 are missing from the storehouse. CCTV shows two men loading sacks into a white pickup.",
+    "gold_entities": [
+      {
+        "text": "Okhla Phase 3",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "incident_location",
+        "value": "Okhla Phase 3"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 2,10,000"
+      },
+      {
+        "type": "evidence",
+        "value": "CCTV"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Date",
+      "Incident Time",
+      "Complainant Identity"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 303(2) BNS",
+      "Section 329 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-015",
+    "category": "Contradictory Numeric Figures",
+    "language": "en",
+    "text": "I, Rohit Chawla, report that on 10/10/2026 at 4:00 PM in Connaught Place, my briefcase was stolen. The briefcase contained exactly Rs. 20,000 in cash, although earlier I thought it had Rs. 2,00,000.",
+    "gold_entities": [
+      {
+        "text": "Rohit Chawla",
+        "type": "PERSON"
+      },
+      {
+        "text": "10/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "4:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Connaught Place",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Rohit Chawla"
+      },
+      {
+        "type": "incident_date",
+        "value": "10/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "4:00 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Connaught Place"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [
+      "Conflicting financial loss figures"
+    ],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 303(2) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-016",
+    "category": "Criminal Intimidation",
+    "language": "en",
+    "text": "I am Sangeeta Mukherjee. On 12/10/2026 at 6:30 PM outside my residence in Salt Lake, Kolkata, accused Subhash Das threatened me with dire consequences and brandished a country-made firearm if I deposed against him in the civil court suit.",
+    "gold_entities": [
+      {
+        "text": "Sangeeta Mukherjee",
+        "type": "PERSON"
+      },
+      {
+        "text": "12/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "6:30 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Salt Lake, Kolkata",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Subhash Das",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Sangeeta Mukherjee"
+      },
+      {
+        "type": "incident_date",
+        "value": "12/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "6:30 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Salt Lake, Kolkata"
+      },
+      {
+        "type": "accused",
+        "value": "Subhash Das"
+      },
+      {
+        "type": "weapon_used",
+        "value": "country-made firearm"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 351(3) BNS",
+      "Arms Act Section 25"
+    ]
+  },
+  {
+    "id": "BENCH-017",
+    "category": "Multilingual / Code-mixed (Tamil/English)",
+    "language": "ta_en",
+    "text": "My name is K. Murugan. On 15/10/2026 at 9:30 PM near T. Nagar bus terminus, Chennai, two bike riders stopped me and attacked me with wooden lathi. They snatched my gold bracelet and fled towards Mount Road.",
+    "gold_entities": [
+      {
+        "text": "K. Murugan",
+        "type": "PERSON"
+      },
+      {
+        "text": "15/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "9:30 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "T. Nagar bus terminus, Chennai",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "K. Murugan"
+      },
+      {
+        "type": "incident_date",
+        "value": "15/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "9:30 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "T. Nagar bus terminus, Chennai"
+      },
+      {
+        "type": "weapon_used",
+        "value": "wooden lathi"
+      },
+      {
+        "type": "property",
+        "value": "gold bracelet"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 304 BNS",
+      "Section 118(1) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-018",
+    "category": "Extortion by Police Impersonation",
+    "language": "en",
+    "text": "I, Harpreet Singh, state that on 17/10/2026 at 7:15 PM near ISBT Kashmiri Gate, Delhi, accused Baldev Singh impersonated a police sub-inspector, seized my identity papers, and extorted Rs. 15,000 under threat of arrest.",
+    "gold_entities": [
+      {
+        "text": "Harpreet Singh",
+        "type": "PERSON"
+      },
+      {
+        "text": "17/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "7:15 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "ISBT Kashmiri Gate, Delhi",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Baldev Singh",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Harpreet Singh"
+      },
+      {
+        "type": "incident_date",
+        "value": "17/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "7:15 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "ISBT Kashmiri Gate, Delhi"
+      },
+      {
+        "type": "accused",
+        "value": "Baldev Singh"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 15,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 204 BNS",
+      "Section 308 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-019",
+    "category": "Forgery & Cheating",
+    "language": "en",
+    "text": "I, Geeta Bansal, report that on 19/10/2026 at 1:00 PM in Jaipur, accused Naresh Mittal forged my signature on a land conveyance deed for Plot 12, Malviya Nagar and attempted registration at the Sub-Registrar Office.",
+    "gold_entities": [
+      {
+        "text": "Geeta Bansal",
+        "type": "PERSON"
+      },
+      {
+        "text": "19/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "1:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Jaipur",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Naresh Mittal",
+        "type": "PERSON"
+      },
+      {
+        "text": "Plot 12, Malviya Nagar",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Geeta Bansal"
+      },
+      {
+        "type": "incident_date",
+        "value": "19/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "1:00 PM"
+      },
+      {
+        "type": "accused",
+        "value": "Naresh Mittal"
+      },
+      {
+        "type": "incident_location",
+        "value": "Jaipur"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 336 BNS",
+      "Section 340 BNS",
+      "Section 318(4) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-020",
+    "category": "Uncertain Subjective Suspicion",
+    "language": "en",
+    "text": "My gold ring was misplaced or taken from my locker at Model Town on 21/10/2026. I feel that my domestic worker Sunita might have taken it, but I have no proof. Please ask her.",
+    "gold_entities": [
+      {
+        "text": "Model Town",
+        "type": "LOCATION"
+      },
+      {
+        "text": "21/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "Sunita",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "incident_date",
+        "value": "21/10/2026"
+      },
+      {
+        "type": "incident_location",
+        "value": "Model Town"
+      },
+      {
+        "type": "accused",
+        "value": "Sunita"
+      }
+    ],
+    "gold_missing_facts": [
+      "Complainant Identity",
+      "Incident Time"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [
+      "might have taken",
+      "no proof"
+    ],
+    "gold_bns_sections": [
+      "Section 306 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-021",
+    "category": "Snatching with Witness",
+    "language": "en",
+    "text": "I, Swati Joshi, state that on 23/10/2026 at 8:45 PM near FC Road, Pune, an unidentified youth on an unnumbered scooter snatched my iPhone 15 Pro worth Rs. 1,20,000 from my hand while I was crossing the zebra crossing. Traffic constable Pawar witnessed the incident and pursued the vehicle.",
+    "gold_entities": [
+      {
+        "text": "Swati Joshi",
+        "type": "PERSON"
+      },
+      {
+        "text": "23/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "8:45 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "FC Road, Pune",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Pawar",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Swati Joshi"
+      },
+      {
+        "type": "incident_date",
+        "value": "23/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "8:45 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "FC Road, Pune"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 1,20,000"
+      },
+      {
+        "type": "witness",
+        "value": "Pawar"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 304 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-022",
+    "category": "Missing Location / Jurisdiction",
+    "language": "en",
+    "text": "I, Tariq Ahmed, report that on 24/10/2026 at 3:00 PM, four individuals attacked my delivery van, assaulted the driver, and took goods worth Rs. 75,000. I am filing this complaint for record.",
+    "gold_entities": [
+      {
+        "text": "Tariq Ahmed",
+        "type": "PERSON"
+      },
+      {
+        "text": "24/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "3:00 PM",
+        "type": "TIME"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Tariq Ahmed"
+      },
+      {
+        "type": "incident_date",
+        "value": "24/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "3:00 PM"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 75,000"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Location"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 309 BNS",
+      "Section 115 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-023",
+    "category": "Assault with Blunt Weapon",
+    "language": "en",
+    "text": "My name is Devendra Yadav. On 26/10/2026 at 9:00 PM near Alwar Bus Stand, accused Jagdish Meena hit me on the head with a heavy wooden club after an argument over agricultural boundary stakes, causing severe skull contusions.",
+    "gold_entities": [
+      {
+        "text": "Devendra Yadav",
+        "type": "PERSON"
+      },
+      {
+        "text": "26/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "9:00 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "Alwar Bus Stand",
+        "type": "LOCATION"
+      },
+      {
+        "text": "Jagdish Meena",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Devendra Yadav"
+      },
+      {
+        "type": "incident_date",
+        "value": "26/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "9:00 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Alwar Bus Stand"
+      },
+      {
+        "type": "accused",
+        "value": "Jagdish Meena"
+      },
+      {
+        "type": "weapon_used",
+        "value": "wooden club"
+      },
+      {
+        "type": "injury",
+        "value": "severe skull contusions"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 118(1) BNS",
+      "Section 115 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-024",
+    "category": "Cyber Phishing & Identity Theft",
+    "language": "en",
+    "text": "I, Pooja Nambiar, state that on 28/10/2026 at 10:00 AM in Ernakulam, an unknown caller posing as a courier customs official threatened me with narcotics charges and extorted Rs. 2,50,000 via RTGS transfer.",
+    "gold_entities": [
+      {
+        "text": "Pooja Nambiar",
+        "type": "PERSON"
+      },
+      {
+        "text": "28/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "10:00 AM",
+        "type": "TIME"
+      },
+      {
+        "text": "Ernakulam",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Pooja Nambiar"
+      },
+      {
+        "type": "incident_date",
+        "value": "28/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "10:00 AM"
+      },
+      {
+        "type": "incident_location",
+        "value": "Ernakulam"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 2,50,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 308 BNS",
+      "Section 318(4) BNS",
+      "Section 66D IT Act"
+    ]
+  },
+  {
+    "id": "BENCH-025",
+    "category": "Lurking House-trespass by Night",
+    "language": "en",
+    "text": "I, Om Prakash Saini, residing at House 14, Rajendra Nagar, Lucknow, state that on 30/10/2026 at 3:15 AM, two unidentified masked individuals broke through the ground floor bathroom window, broke open the iron almirah, and decamped with gold ornaments worth Rs. 3,50,000. CCTV footage from neighbor Verma's porch records their entry.",
+    "gold_entities": [
+      {
+        "text": "Om Prakash Saini",
+        "type": "PERSON"
+      },
+      {
+        "text": "House 14, Rajendra Nagar, Lucknow",
+        "type": "LOCATION"
+      },
+      {
+        "text": "30/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "3:15 AM",
+        "type": "TIME"
+      },
+      {
+        "text": "Verma",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "Om Prakash Saini"
+      },
+      {
+        "type": "incident_date",
+        "value": "30/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "3:15 AM"
+      },
+      {
+        "type": "incident_location",
+        "value": "House 14, Rajendra Nagar, Lucknow"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 3,50,000"
+      },
+      {
+        "type": "evidence",
+        "value": "CCTV footage"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 331(4) BNS",
+      "Section 305 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-TA-026",
+    "category": "Theft / Burglary",
+    "language": "ta",
+    "text": "என் பெயர் கதிரேசன். 12/10/2026 அன்று மாலை 6:30 மணிக்கு சென்னை பேருந்து நிலையம் அருகே எனது மடிக்கணினி மற்றும் ரூ. 40,000 திருடப்பட்டது. தயவுசெய்து நடவடிக்கை எடுக்கவும்.",
+    "gold_entities": [
+      {
+        "text": "கதிரேசன்",
+        "type": "PERSON"
+      },
+      {
+        "text": "12/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "சென்னை பேருந்து நிலையம்",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "கதிரேசன்"
+      },
+      {
+        "type": "incident_date",
+        "value": "12/10/2026"
+      },
+      {
+        "type": "incident_location",
+        "value": "சென்னை பேருந்து நிலையம்"
+      },
+      {
+        "type": "loss",
+        "value": "ரூ. 40,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 303(2) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-TA-027",
+    "category": "Snatching",
+    "language": "ta",
+    "text": "புகார்தாரர் மீனாட்சி. 14/10/2026 அன்று இரவு 8:00 மணிக்கு மதுரை அண்ணா நகர் அருகே தெரியாத நபர்கள் என் தங்கச் சங்கிலியை பறித்துச் சென்றனர். இதன் மதிப்பு ரூ. 85,000.",
+    "gold_entities": [
+      {
+        "text": "மீனாட்சி",
+        "type": "PERSON"
+      },
+      {
+        "text": "14/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "மதுரை அண்ணா நகர்",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "மீனாட்சி"
+      },
+      {
+        "type": "incident_date",
+        "value": "14/10/2026"
+      },
+      {
+        "type": "incident_location",
+        "value": "மதுரை அண்ணா நகர்"
+      },
+      {
+        "type": "loss",
+        "value": "ரூ. 85,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 304 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-TA-028",
+    "category": "Physical Assault / Hurt",
+    "language": "ta",
+    "text": "என் பெயர் சுந்தரம். 16/10/2026 அன்று காலை 10:00 மணிக்கு கோயம்புத்தூர் காந்திபுரம் அருகே எதிரி ரமேஷ் கத்தியால் தாக்கி ரத்தக் காயம் ஏற்படுத்தினார்.",
+    "gold_entities": [
+      {
+        "text": "சுந்தரம்",
+        "type": "PERSON"
+      },
+      {
+        "text": "16/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "கோயம்புத்தூர்",
+        "type": "LOCATION"
+      },
+      {
+        "text": "ரமேஷ்",
+        "type": "PERSON"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "சுந்தரம்"
+      },
+      {
+        "type": "incident_date",
+        "value": "16/10/2026"
+      },
+      {
+        "type": "accused",
+        "value": "ரமேஷ்"
+      },
+      {
+        "type": "weapon_used",
+        "value": "கத்தி"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 118(1) BNS"
+    ]
+  },
+  {
+    "id": "BENCH-TA-029",
+    "category": "Tamil-English Code-Mixed Snatching",
+    "language": "ta_en",
+    "text": "My name is S. Murugan. On 18/10/2026 at 9:15 PM near சென்னை பேருந்து நிலையம், two unknown men intercepted my bike, attacked me with wooden lathi and snatched my தங்கச் சங்கிலி worth Rs. 60,000.",
+    "gold_entities": [
+      {
+        "text": "S. Murugan",
+        "type": "PERSON"
+      },
+      {
+        "text": "18/10/2026",
+        "type": "DATE"
+      },
+      {
+        "text": "9:15 PM",
+        "type": "TIME"
+      },
+      {
+        "text": "சென்னை பேருந்து நிலையம்",
+        "type": "LOCATION"
+      }
+    ],
+    "gold_facts": [
+      {
+        "type": "complainant",
+        "value": "S. Murugan"
+      },
+      {
+        "type": "incident_date",
+        "value": "18/10/2026"
+      },
+      {
+        "type": "incident_time",
+        "value": "9:15 PM"
+      },
+      {
+        "type": "incident_location",
+        "value": "சென்னை பேருந்து நிலையம்"
+      },
+      {
+        "type": "loss",
+        "value": "Rs. 60,000"
+      }
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": [],
+    "gold_ambiguities": [],
+    "gold_bns_sections": [
+      "Section 304 BNS"
+    ]
+  },
+  {
+    "id": "BENCH-TA-030",
+    "category": "Vague / Ambiguous Statement in Tamil",
+    "language": "ta",
+    "text": "என் கைபேசி மற்றும் பணம் சில நாட்களுக்கு முன் காணாமல் போனது. எனக்கு என் பக்கத்து வீட்டு நபர் மீது சந்தேகம் உள்ளது, ஆனால் ஆதாரம் இல்லை.",
+    "gold_entities": [],
+    "gold_facts": [
+      {
+        "type": "property",
+        "value": "கைபேசி"
+      }
+    ],
+    "gold_missing_facts": [
+      "Incident Date",
+      "Incident Time",
+      "Incident Location",
+      "Complainant Identity"
+    ],
+    "gold_contradictions": [],
+    "gold_ambiguities": [
+      "சில நாட்களுக்கு முன்",
+      "சந்தேகம் உள்ளது"
+    ],
+    "gold_bns_sections": [
+      "Section 303(2) BNS"
+    ]
+  }
+]

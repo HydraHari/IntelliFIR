@@ -1,0 +1,37 @@
+[
+  {
+    "id": "EVAL-001",
+    "text": "I, Ramesh Gupta, report that on 15/09/2026 at 9:00 PM, my laptop was stolen from Cafe Coffee Day, Sector 29, Gurgaon by an unknown man wearing a blue jacket.",
+    "gold_entities": [
+      {"text": "Ramesh Gupta", "type": "PERSON"},
+      {"text": "15/09/2026", "type": "DATE"},
+      {"text": "9:00 PM", "type": "TIME"},
+      {"text": "Cafe Coffee Day", "type": "ORGANIZATION"},
+      {"text": "Sector 29, Gurgaon", "type": "LOCATION"}
+    ],
+    "gold_missing_facts": [],
+    "gold_contradictions": []
+  },
+  {
+    "id": "EVAL-002",
+    "text": "My purse containing Rs. 12,000 cash and credit cards was snatched sometime back near Gandhi Market. I suspect my neighbor Ajay might be involved.",
+    "gold_entities": [
+      {"text": "Gandhi Market", "type": "LOCATION"},
+      {"text": "Ajay", "type": "PERSON"}
+    ],
+    "gold_missing_facts": ["Incident Date", "Incident Time"],
+    "gold_contradictions": []
+  },
+  {
+    "id": "EVAL-003",
+    "text": "Incident took place on 01/10/2026, or maybe it was 05/10/2026, when two men assaulted Deepak Verma outside Metro Station.",
+    "gold_entities": [
+      {"text": "01/10/2026", "type": "DATE"},
+      {"text": "05/10/2026", "type": "DATE"},
+      {"text": "Deepak Verma", "type": "PERSON"},
+      {"text": "Metro Station", "type": "LOCATION"}
+    ],
+    "gold_missing_facts": ["Incident Time"],
+    "gold_contradictions": ["Multiple conflicting dates"]
+  }
+]

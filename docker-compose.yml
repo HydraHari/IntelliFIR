@@ -1,0 +1,128 @@
+version: "3.9"
+
+services:
+  # ─────────────────────────────────────
+  # PostgreSQL Database
+  # ─────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    container_name: intellifir_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-intellifir}
+      POSTGRES_USER: ${POSTGRES_USER:-intellifir}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_in_production}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-intellifir} -d ${POSTGRES_DB:-intellifir}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - intellifir_network
+
+  # ─────────────────────────────────────
+  # FastAPI Backend
+  # ─────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: intellifir_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-intellifir}:${POSTGRES_PASSWORD:-changeme_in_production}@postgres:5432/${POSTGRES_DB:-intellifir}
+      SECRET_KEY: ${SECRET_KEY:-change_this_secret_key_in_production}
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-30}
+      NER_MODEL_CHECKPOINT: ${NER_MODEL_CHECKPOINT:-dslim/bert-base-NER}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-all-MiniLM-L6-v2}
+      FAISS_INDEX_PATH: /app/faiss_index
+      UPLOAD_DIR: /app/uploads
+      MAX_UPLOAD_SIZE_MB: ${MAX_UPLOAD_SIZE_MB:-20}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.1:8b}
+      LLM_PROVIDER: ${LLM_PROVIDER:-none}
+      SIMILARITY_THRESHOLD: ${SIMILARITY_THRESHOLD:-0.5}
+      DEMO_MODE: ${DEMO_MODE:-false}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://localhost:80,http://localhost}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - uploads_data:/app/uploads
+      - faiss_data:/app/faiss_index
+      - models_cache:/app/models_cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - intellifir_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # ─────────────────────────────────────
+  # React Frontend (Nginx)
+  # ─────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+        VITE_DEMO_MODE: ${DEMO_MODE:-false}
+    container_name: intellifir_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-80}:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - intellifir_network
+
+  # ─────────────────────────────────────
+  # Alembic Migration Runner (runs once)
+  # ─────────────────────────────────────
+  migrate:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: intellifir_migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-intellifir}:${POSTGRES_PASSWORD:-changeme_in_production}@postgres:5432/${POSTGRES_DB:-intellifir}
+    command: ["alembic", "upgrade", "head"]
+    networks:
+      - intellifir_network
+    restart: "no"
+
+volumes:
+  postgres_data:
+    driver: local
+  uploads_data:
+    driver: local
+  faiss_data:
+    driver: local
+  models_cache:
+    driver: local
+
+networks:
+  intellifir_network:
+    driver: bridge

@@ -1,0 +1,206 @@
+# ==============================================================================
+# IntelliFIR - Comprehensive .gitignore
+# Covers Python, FastAPI, React, Node, Vite, Virtual Environments, Model Weights,
+# Checkpoints, Vector Indexes, Local Databases, Secrets, Private Data, and OS/IDE
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Secrets, Credentials, and Environment Files (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.env.*
+**/.env
+**/.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+secrets/
+private/
+credentials.json
+client_secret*.json
+
+# ------------------------------------------------------------------------------
+# Python & FastAPI
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# ------------------------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv*/
+venv*/
+
+# ------------------------------------------------------------------------------
+# Testing, Coverage, and Linting
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+test-results/
+junit.xml
+coverage.xml
+nosetests.xml
+*.cover
+*.py,cover
+.cache
+
+# ------------------------------------------------------------------------------
+# Node, React, and Frontend (Vite)
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.pnp
+.pnp.js
+frontend/dist/
+dist/
+frontend/.vite/
+.vite/
+frontend/coverage/
+
+# ------------------------------------------------------------------------------
+# Local Databases & State
+# ------------------------------------------------------------------------------
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+intellifir.db
+
+# ------------------------------------------------------------------------------
+# Private Complaint Data & Uploads
+# ------------------------------------------------------------------------------
+uploads/
+backend/uploads/
+**/uploads/
+storage/
+private_data/
+
+# ------------------------------------------------------------------------------
+# Model Weights, Checkpoints, and Vector Indexes (Large Binaries)
+# ------------------------------------------------------------------------------
+models_cache/
+backend/models_cache/
+**/models_cache/
+faiss_index/
+backend/faiss_index/
+**/faiss_index/
+checkpoints/
+**/checkpoints/
+weights/
+**/weights/
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+*.ckpt
+*.model
+*.pb
+
+# ------------------------------------------------------------------------------
+# Alembic Migration Cache
+# ------------------------------------------------------------------------------
+backend/alembic/versions/*.pyc
+
+# ------------------------------------------------------------------------------
+# Generated Evaluation Runs and Temporary Test Outputs
+# ------------------------------------------------------------------------------
+evaluation_results.json
+evaluation_results*.json
+**/evaluation_results*.json
+**/test_eval_output.json
+**/test_eval_corrected_temp.json
+test_eval_*.json
+*.tmp
+*.temp
+
+# ------------------------------------------------------------------------------
+# Logs & Process Files
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------------------------------------------
+# Operating System & IDE Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# Docker Local Overrides
+# ------------------------------------------------------------------------------
+.docker/
+docker-compose.override.yml
